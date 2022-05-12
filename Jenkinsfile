@@ -7,6 +7,15 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Testing') {
+            when {
+                branch 'PR-*'
+            }
+            agent { label 'agent' }
+            steps {
+                sh './test.sh'
+            }
+        }
         stage('Secreto') {
             agent {label 'docker-agent'}
             steps {
