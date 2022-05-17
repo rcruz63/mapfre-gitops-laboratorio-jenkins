@@ -11,7 +11,7 @@ fi
 
 OUTPUT=$(echo "secreto"|./secreto.sh pruebas)
 
-if [ "$OUTPUT" = "Encontraste el truco!: el primer parámetro del script es: sabeurp" ]; then
+if [ "$OUTPUT" = "Encontraste el truco!: el primer parámetro del script es: pruebas" ]; then
     echo "Test 2 correcto"
 else
     echo "Test 2 FALLADO"
